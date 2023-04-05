@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import App from './App'
 import store from './redux/store'
 import { FilterContextProvider } from './components/FilterContext/FilterContextProvider'
+import { BrowserRouter } from 'react-router-dom'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,7 +23,9 @@ root.render(
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <FilterContextProvider>
-            <App />
+           <BrowserRouter>
+                <App />
+            </BrowserRouter>
         </FilterContextProvider>
       </QueryClientProvider>
     </Provider>
