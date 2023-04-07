@@ -1,3 +1,4 @@
+import { ProductInFavoutire } from './redux/slices/favouritesSlice/favouritesSlice'
 import {
   BASE_URL, CONTENT_TYPE, GROUP_ID, USER_INFO_KEY_IN_LS,
 } from './tools/const_variables/const_variables'
@@ -86,7 +87,7 @@ class API {
   }
 
   // Получить выбранные товары по id в корзине
-  getProductsById(array: Product[]) {
+  getProductsById(array: ProductInFavoutire[]) {
     const userInfo = localStorage.getItem(USER_INFO_KEY_IN_LS)
     const requests = array.map((obj: Product) => fetch(
       `${this.BASE_URL}/products/${obj.id}`,

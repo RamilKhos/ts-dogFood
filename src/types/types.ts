@@ -8,17 +8,18 @@ export type Reviews = {
 }
 
 export type Product = {
-    created_at: string,
-    description: string,
-    discount: number,
-    likes: string[],
     name: string,
+    discount: number,
     pictures: string,
     price: number,
-    rewiews: Reviews[],
     stock: number,
-    wigth: number,
-    id: string,
+    _id?: string,
+    created_at?: string,
+    description?: string,
+    likes?: string[],
+    rewiews?: Reviews[],
+    wigth?: number,
+    id?: string,
 }
 
 export interface NothingFoundProps {
@@ -48,3 +49,4 @@ export interface ResponceProfileForm extends I_ProfileFormItems{
     group: string,
     _id: string,
 }
+
