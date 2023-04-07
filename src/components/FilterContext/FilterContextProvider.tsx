@@ -1,21 +1,11 @@
-import { createContext, useContext, useMemo, ReactNode } from 'react'
+import { createContext, useContext, useMemo } from 'react'
 import { useFilter } from './useFilter'
+import { I_FilterContext, I_FilterContextMethods } from '../../types/types'
 
-type FilterContextProviderProps = {
-    children: ReactNode;
-}
+const FilterContext = createContext<I_FilterContext>(null!)
+const FilterContextMethods = createContext<I_FilterContextMethods>(null!)
 
-type FilterContextData = {
-    search: string;
-}
-type FilterContextMethods = {
-    setSearch: (search: string) => void;
-}
-
-const FilterContext = createContext <FilterContextData | undefined> (undefined)
-const FilterContextMethods = createContext <FilterContextMethods | undefined> (undefined)
-
-export function FilterContextProvider({ children }: FilterContextProviderProps) {
+export function FilterContextProvider({ children }: any) {
   const { search, setSearch } = useFilter()
 
   const filterContextData = useMemo(() => ({
@@ -32,7 +22,6 @@ export function FilterContextProvider({ children }: FilterContextProviderProps) 
         {children}
       </FilterContextMethods.Provider>
     </FilterContext.Provider>
-
   )
 }
 

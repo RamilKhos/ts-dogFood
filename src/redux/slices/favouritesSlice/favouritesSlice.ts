@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { PRODUCTS_IN_FAVOURITE } from '../../../const_variables/const_variables'
+import { PRODUCTS_IN_FAVOURITE } from '../../../tools/const_variables/const_variables'
 
 type ProductInFavoutire = {
     id: number,

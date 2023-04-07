@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { PRODUCTS_IN_CART, PRODUCTS_IN_FAVOURITE, USER_INFO_KEY_IN_LS } from '../const_variables/const_variables'
+import { PRODUCTS_IN_CART, PRODUCTS_IN_FAVOURITE, USER_INFO_KEY_IN_LS } from '../tools/const_variables/const_variables'
 import { cartReducer } from './slices/cartSlice/cartSlice'
 import { favouritesReducer } from './slices/favouritesSlice/favouritesSlice'
 import { userInfoReducer } from './slices/userInfoSlice/userInfoSlice'

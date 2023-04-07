@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import logoErrorMain from '../images/error_main.png'
+import logoErrorMain from '../../resources/images/error_main.png'
 
 export const MainErrorScreen: React.FC = () => {
   return (

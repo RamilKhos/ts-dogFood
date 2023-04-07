@@ -1,5 +1,5 @@
 import { useNavigate, Link } from 'react-router-dom'
-import logoDog from '../../images/logo_dog.png'
+import logoDog from '../../../resources/images/logo_dog.png'
 import stylesHeader from '../styles.module.scss'
 import { useAppSelector } from '../../../redux/main'
 

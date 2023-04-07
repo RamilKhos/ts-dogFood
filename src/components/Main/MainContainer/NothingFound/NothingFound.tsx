@@ -1,9 +1,10 @@
-import logoNouthingFound from '../../../images/Nothing_found.png'
-import { useFilterContextMethods } from '../../../FilterContext/FilterContextProvider'
+import logoNouthingFound from '../../../../resources/images/Nothing_found.png'
+import { NothingFoundProps } from '../../../../types/types'
+import { useFilter } from '../../../FilterContext/useFilter'
 import styles from './styles.module.scss'
 
-export function NothingFound({ setInput }) {
-  const { setSearch } = useFilterContextMethods()
+export const NothingFound: React.FC <NothingFoundProps> = ({ setInput }) => {
+  const { setSearch } = useFilter()
 
   const btnHandler = () => {
     setSearch('')
