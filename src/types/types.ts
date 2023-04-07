@@ -36,3 +36,15 @@ export interface I_FilterContextMethods {
 export type Query = {
     query: string
 }
+
+export interface I_ProfileFormItems {
+    avatar: string, 
+    name: string, 
+    about: string, 
+    email: string
+}
+
+export interface ResponceProfileForm extends I_ProfileFormItems{
+    group: string,
+    _id: string,
+}
