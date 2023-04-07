@@ -20,3 +20,19 @@ export type Product = {
     wigth: number,
     id: string,
 }
+
+export interface NothingFoundProps {
+    setInput: (a: string) => void
+}
+
+export interface I_FilterContext {
+    search: string,
+}
+
+export interface I_FilterContextMethods {
+    setSearch: (search: string) => void
+}
+
+export type Query = {
+    query: string
+}

@@ -1,6 +1,6 @@
 import {
   BASE_URL, CONTENT_TYPE, GROUP_ID, USER_INFO_KEY_IN_LS,
-} from './const_variables/const_variables'
+} from './tools/const_variables/const_variables'
 import { Product } from './types/types'
 
 class API {
@@ -26,7 +26,6 @@ class API {
         group: 'sm8',
         password: inputPassword,
       }),
-
     })
   }
 

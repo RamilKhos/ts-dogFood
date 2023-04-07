@@ -1,5 +1,5 @@
 import stylesFooter from './styles.module.scss'
-import logoDog from '../images/logo_dog.png'
+import logoDog from '../../resources/images/logo_dog.png'
 
 export const Footer: React.FC = () => {
   return (

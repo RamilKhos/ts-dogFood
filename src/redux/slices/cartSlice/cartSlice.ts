@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { PRODUCTS_IN_CART } from '../../../const_variables/const_variables'
+import { PRODUCTS_IN_CART } from '../../../tools/const_variables/const_variables'
 
 type ProductInCart = {
     id: number,

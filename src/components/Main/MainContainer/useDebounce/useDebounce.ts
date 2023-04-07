@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 
-export const useDebounce = (value, ms = 300) => {
-  const [debounceValue, setDebounceValue] = useState(value)
+type UseDebounce = (value: string, ms: number) => typeof value
+
+export const useDebounce: UseDebounce = (value, ms = 300) => {
+  const [debounceValue, setDebounceValue] = useState<string>(value)
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {

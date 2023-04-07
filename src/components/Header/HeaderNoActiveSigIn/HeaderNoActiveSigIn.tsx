@@ -1,4 +1,4 @@
-import logoDog from '../../images/logo_dog.png'
+import logoDog from '../../../resources/images/logo_dog.png'
 import stylesHeader from '../styles.module.scss'
 
 export const HeaderNoActiveSigIn: React.FC = () => {

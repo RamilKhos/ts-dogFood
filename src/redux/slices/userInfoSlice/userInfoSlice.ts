@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { USER_INFO_KEY_IN_LS } from '../../../const_variables/const_variables'
+import { USER_INFO_KEY_IN_LS } from '../../../tools/const_variables/const_variables'
 
 type UserInfo = {
     token: string | null,
