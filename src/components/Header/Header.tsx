@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
   return (
     <header className={`${stylesHeader.header}`}>
       <div className="container">
-        {token ? <HeaderActiveSigIn /> : <HeaderNoActiveSigIn />}
+        {token.token !== null ? <HeaderActiveSigIn /> : <HeaderNoActiveSigIn />}
       </div>
     </header>
   )

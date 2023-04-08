@@ -11,6 +11,7 @@ import { Favourites } from './components/Favourites/Favourites'
 import { ProductDetailPage } from './components/ProductDetailPage/ProductDetailPage'
 import 'react-toastify/dist/ReactToastify.css';
 import { Cart } from './components/Cart/Cart'
+import { AddProduct } from './components/AddProduct/AddProduct'
 
 function App() {
     const token = useAppSelector((store) => store.userInfo)
@@ -33,6 +34,7 @@ function App() {
                 <Route path='/product/:id' element={<ProductDetailPage />}/> 
                 <Route path='/favourites' element={<Favourites />}/> 
                 <Route path='/cart' element={<Cart />}/> 
+                <Route path='/add_product' element={<AddProduct />}/> 
                 <Route path='*' element={<Main />} />
             </Routes>
             <Footer />

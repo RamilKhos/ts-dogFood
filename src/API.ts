@@ -114,9 +114,9 @@ class API {
   addProduct(
     pictures: string, 
     name: string, 
-    price: number, 
+    price: string, 
     discount: string, 
-    stock: number, 
+    stock: string, 
     wight: string, 
     description: string,
     ) {
