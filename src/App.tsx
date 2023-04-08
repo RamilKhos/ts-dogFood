@@ -8,6 +8,8 @@ import { ProfileForm } from './components/ProfileForm/ProfileForm'
 import { useAppSelector } from './redux/main'
 import { useEffect } from 'react'
 import { Favourites } from './components/Favourites/Favourites'
+import { ProductDetailPage } from './components/ProductDetailPage/ProductDetailPage'
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     const token = useAppSelector((store) => store.userInfo)
@@ -27,6 +29,7 @@ function App() {
                 <Route path='/login' element={<SignForms />}/> 
                 <Route path='/signup' element={<SignForms />}/> 
                 <Route path='/profile' element={<ProfileForm />}/> 
+                <Route path='/product/:id' element={<ProductDetailPage />}/> 
                 <Route path='/favourites' element={<Favourites />}/> 
                 <Route path='*' element={<Main />} />
             </Routes>

@@ -87,12 +87,10 @@ class API {
   }
 
   // Получить выбранные товары по id в корзине
-  getProductsById(array: ProductInFavoutire[]) {
+  getProductsById(array: ProductInFavoutire[]){
     const userInfo = localStorage.getItem(USER_INFO_KEY_IN_LS)
-    const requests = array.map((obj: Product) => fetch(
-      `${this.BASE_URL}/products/${obj.id}`,
-      { headers: { authorization: `Bearer ${JSON.parse(userInfo || '').token}` } },
-    ))
+    const requests = array.map((obj: { id: string }) => fetch(`${this.BASE_URL}/products/${obj.id}`,
+      { headers: { authorization: `Bearer ${JSON.parse(userInfo || '').token}` } }))
     return Promise.all(requests)
   }
 
@@ -152,7 +150,7 @@ class API {
   }
 
   // Добавить отзыв
-  addReview(id: string, rating: string, text: string) {
+  addReview(id: string, rating: number, text: string) {
     const userInfo = localStorage.getItem(USER_INFO_KEY_IN_LS)
     return fetch(`${this.BASE_URL}/products/review/${id}`, {
       method: 'POST',

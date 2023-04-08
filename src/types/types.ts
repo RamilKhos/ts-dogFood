@@ -1,10 +1,20 @@
+export type AuthorProduct = {
+    about: string,
+    avatar: string,
+    email: string,
+    name: string,
+    _id: string,
+}
+
 export type Reviews = {
-    author: string,
+    author: AuthorProduct,
     created_at: string,
     product: string,
+    rating: number,
     text: string,
     updated_at: string,
     _id: string,
+    id?: string,
 }
 
 export type Product = {
@@ -17,9 +27,10 @@ export type Product = {
     created_at?: string,
     description?: string,
     likes?: string[],
-    rewiews?: Reviews[],
+    reviews?: Reviews[],
     wigth?: number,
     id?: string,
+    author: AuthorProduct
 }
 
 export interface NothingFoundProps {
@@ -50,3 +61,7 @@ export interface ResponceProfileForm extends I_ProfileFormItems{
     _id: string,
 }
 
+export type AddReview = {
+    rating: number,
+    text: string
+}
