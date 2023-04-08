@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 import { Favourites } from './components/Favourites/Favourites'
 import { ProductDetailPage } from './components/ProductDetailPage/ProductDetailPage'
 import 'react-toastify/dist/ReactToastify.css';
+import { Cart } from './components/Cart/Cart'
 
 function App() {
     const token = useAppSelector((store) => store.userInfo)
@@ -31,6 +32,7 @@ function App() {
                 <Route path='/profile' element={<ProfileForm />}/> 
                 <Route path='/product/:id' element={<ProductDetailPage />}/> 
                 <Route path='/favourites' element={<Favourites />}/> 
+                <Route path='/cart' element={<Cart />}/> 
                 <Route path='*' element={<Main />} />
             </Routes>
             <Footer />
