@@ -6,14 +6,14 @@ import { useMainContainer } from './useMainContainer/useMainContainer'
 import style from './styles.module.scss'
 import { productSorting } from './utils'
 
-export function MainContainer () {
+export const MainContainer: React.FC = () => {
   const {
     data, isLoading, isError, isFetching, input, setInput, btnAddHandler, setSort, sort
   } = useMainContainer()
 
   if (isLoading || isFetching) return <Loader />
 
-  const dataSort = data.length > 0 ? productSorting(data, sort) : data
+  const dataSort = data!.length > 0 ? productSorting(data!, sort) : data
 
   if (isError) return <MainErrorScreen />
 
@@ -31,7 +31,7 @@ export function MainContainer () {
       </div>
 
       <div>
-        {dataSort.length > 0
+        {dataSort!.length > 0
           ? (
             <>
               <div className={style.filter_container}>
@@ -45,7 +45,7 @@ export function MainContainer () {
               </div>
 
               <div className="row row-cols-1 row-cols-md-5 g-4 mb-5">
-                {dataSort.map((el) => (
+                {dataSort!.map((el) => (
                   <MainCard
                     key={el._id}
                     name={el.name}
