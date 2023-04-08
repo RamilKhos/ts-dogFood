@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { PRODUCTS_IN_CART } from '../../../tools/const_variables/const_variables'
 
 type ProductInCart = {
-    id: number,
+    id: string,
     isSelected: boolean,
     count: number,
 }
@@ -28,7 +28,7 @@ export const cartSlice = createSlice({
       reducer: (state, action: PayloadAction <ProductInCart> ) => {
         state.push(action.payload)
       },
-      prepare: (id: number) => ({
+      prepare: (id: string) => ({
         payload: {
           id,
           isSelected: true,
@@ -37,19 +37,19 @@ export const cartSlice = createSlice({
       }),
     },
 
-    incrementCountProduct: (state, action: PayloadAction <number>) => {
+    incrementCountProduct: (state, action: PayloadAction <string>) => {
       state.map((product) => {
         product.id === action.payload ? product.count += 1 : product
       })
     },
 
-    decrementCountProduct: (state, action: PayloadAction <number>) => {
+    decrementCountProduct: (state, action: PayloadAction <string>) => {
       state.map((product) => {
         product.id === action.payload ? product.count -= 1 : product
       })
     },
 
-    selectedProductInCart: (state, action: PayloadAction <number>) => {
+    selectedProductInCart: (state, action: PayloadAction <string>) => {
       state.map((product) => {
         product.id === action.payload ? product.isSelected = !product.isSelected : product
       })
@@ -59,7 +59,7 @@ export const cartSlice = createSlice({
       state.forEach((product) => { product.isSelected = action.payload })
     },
 
-    deleteProductFromCart: (state, action: PayloadAction <number>) => {
+    deleteProductFromCart: (state, action: PayloadAction <string>) => {
       return state.filter((product) => product.id !== action.payload)
     },
 
