@@ -65,3 +65,13 @@ export type AddReview = {
     rating: number,
     text: string
 }
+
+export type AddProduct = {
+    pictures: string,
+    name: string,
+    price: string,
+    discount: string,
+    stock: string,
+    wight: string,
+    description: string,
+}
