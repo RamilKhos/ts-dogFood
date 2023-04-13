@@ -30,7 +30,7 @@ export type Product = {
     reviews?: Reviews[],
     wigth?: number,
     id?: string,
-    author: AuthorProduct
+    author?: AuthorProduct
 }
 
 export interface NothingFoundProps {

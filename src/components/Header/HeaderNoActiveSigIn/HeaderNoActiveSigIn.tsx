@@ -5,7 +5,7 @@ export const HeaderNoActiveSigIn: React.FC = () => {
   return (
     <div className="d-flex justify-content-center align-items-center">
       <div className="d-flex align-items-center">
-        <img src={logoDog} width={80} alt="logo_dog" />
+        <img src={logoDog} width={70} alt="logo_dog" />
         <h3 className={`${stylesHeader.caption} ms-2 `}>DogFoot</h3>
       </div>
     </div>

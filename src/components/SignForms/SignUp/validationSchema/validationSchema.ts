@@ -7,7 +7,8 @@ export const validationSchemaSignUp = Yup.object(
       .min(6, 'Укажите минимум шесть символов')
       .required('Поле обязательное для заполнения'),
     double_password: Yup.string()
-    //   .oneOf([Yup.ref('password'), null], 'Пароли должны совпадать')
+      .oneOf([Yup.ref('password'), null], 'Пароли должны совпадать')
       .required('Поле обязательное для заполнения'),
   },
 )
+
