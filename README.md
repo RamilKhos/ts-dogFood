@@ -27,10 +27,11 @@
 ## Getting Started
 ```
 npm install
-npm start
+npm run dev
 ```
 
 ## Tech Stack
+* TypeScript
 * React
 * Redux
 * TanstackQuery
