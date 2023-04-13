@@ -7,7 +7,6 @@ import { validationSchemaAddProductReview } from './validationSchemaAddProductRe
 import { useReview } from './useReview/useReview'
 import React from 'react'
 
-
 export const Review: React.FC = () => {
     const {
         id, isModalOpen, mutate, isLoading, review, closeModal, openModal,

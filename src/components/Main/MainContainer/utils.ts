@@ -1,7 +1,8 @@
-/* eslint-disable max-len */
-const sumСalculation = (elem) => elem.price - (elem.price * (elem.discount / 100))
+import { Product } from "../../../types/types"
 
-export const productSorting = ([...products], key) => {
+const sumСalculation = (elem: Product) => elem.price - (elem.price * (elem.discount / 100))
+
+export const productSorting = ([...products], key: string) => {
   switch (key) {
     case 'POPULAR':
       return products.sort((a, b) => b.likes.length - a.likes.length)

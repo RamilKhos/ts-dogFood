@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './styles.module.scss'
+import { Product } from '../../../../types/types'
 
-export function MainCard({
+export const MainCard: React.FC<Product> = ({
   name, price, pictures, discount, id, stock,
-}) {
+}) => {
   const navigate = useNavigate()
 
   const clickBoxHandler = () => {

@@ -28,8 +28,8 @@ export const ProductDetailPage: React.FC = () => {
 
   if (isLoading) return <Loader />
 
-  const isMyLike = product?.likes?.includes(userID!)
-  const isMyProduct = product?.author._id === userID
+  const isMyLike = product!.likes!.includes(userID!)
+  const isMyProduct = product!.author!._id === userID
 
   const showReviews = () => {
     setShowReview(!showReview)

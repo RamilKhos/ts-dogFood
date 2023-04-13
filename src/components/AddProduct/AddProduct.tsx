@@ -4,21 +4,23 @@ import { useAddProduct } from './customHook/useAddProduct'
 import styles from './styles.module.scss'
 import { validationSchemaAddProduct } from './validationSchemaAddProduct/validationSchemaAddProduct'
 
+const initialValues = {
+    available: true,
+    pictures: '',
+    name: '',
+    price: '',
+    discount: '',
+    stock: '',
+    wight: '',
+    description: '',
+}
+
 export const AddProduct: React.FC = () => {
   const { mutate } = useAddProduct()
 
   return (
     <Formik
-      initialValues={{
-        available: true,
-        pictures: '',
-        name: '',
-        price: '',
-        discount: '',
-        stock: '',
-        wight: '',
-        description: '',
-      }}
+      initialValues={initialValues}
       validationSchema={validationSchemaAddProduct}
       onSubmit={mutate}
     >
