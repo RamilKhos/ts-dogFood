@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux'
 import { HeaderActiveSigIn } from './HeaderActiveSigIn/HeaderActiveSigIn'
 import { HeaderNoActiveSigIn } from './HeaderNoActiveSigIn/HeaderNoActiveSigIn'
 import stylesHeader from './styles.module.scss'

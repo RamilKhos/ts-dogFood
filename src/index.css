@@ -10,13 +10,14 @@ body {
     background: linear-gradient(90deg, #454545,#212121);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .appStyles {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+}
+
+button {
+    border: none;
+    background-color: transparent;
 }

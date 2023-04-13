@@ -8,7 +8,7 @@ export const Cart: React.FC = () => {
   const cart = useAppSelector((store) => store.cart)
 
   return (
-    <div className={`${styles.cart_page_new}`}>
+    <div className={`${styles.cart_page_new} border`}>
       {cart.length > 0 ? <СartWithGoods /> : <CartIsEmpty />}
     </div>
   )
